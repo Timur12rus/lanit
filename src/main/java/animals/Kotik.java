@@ -1,4 +1,4 @@
-package main.java;
+package main.java.animals;
 
 public class Kotik {
     private String name;
@@ -8,7 +8,7 @@ public class Kotik {
 
     private final int METHODS = 5;
 
-    static int count;
+    private static int count;
 
     public Kotik() {
     }
@@ -81,7 +81,7 @@ public class Kotik {
     }
 
     public void eat(int satietyValue, String foodName) {
-        satiety += satietyValue;
+        eat(satietyValue);
     }
 
     public void eat() {
@@ -136,5 +136,41 @@ public class Kotik {
             }
         }
         return actionsArray;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getVoice() {
+        return voice;
+    }
+
+    public float getSatiety() {
+        return satiety;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setVoice(String voice) {
+        this.voice = voice;
+    }
+
+    public void setSatiety(float satiety) {
+        this.satiety = satiety;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
     }
 }
