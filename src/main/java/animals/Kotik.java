@@ -11,67 +11,69 @@ public class Kotik {
     private static int count;
 
     public Kotik() {
+        count++;
     }
 
     public Kotik(String name, String voice, float satiety, float weight) {
+        this();
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
         this.weight = weight;
-        count++;
+
     }
 
     public boolean play() {
         if (satiety > 0) {
-            System.out.println("РљРѕС‚РёРє РёРіСЂР°РµС‚");
+            System.out.println("Котик играет");
             satiety--;
             return true;
         } else {
-            System.out.println("РљРѕС‚РёРє РїСЂРѕСЃРёС‚ РµСЃС‚СЊ");
+            System.out.println("Котик просит есть");
             return false;
         }
     }
 
     public boolean sleep() {
         if (satiety > 0) {
-            System.out.println("РљРѕС‚РёРє СЃРїРёС‚");
+            System.out.println("Котик спит");
             satiety--;
             return true;
         } else {
-            System.out.println("РљРѕС‚РёРє РїСЂРѕСЃРёС‚ РµСЃС‚СЊ");
+            System.out.println("Котик просит есть");
             return false;
         }
     }
 
     public boolean wash() {
         if (satiety > 0) {
-            System.out.println("РљРѕС‚РёРє РјРѕРµС‚СЃСЏ");
+            System.out.println("Котик моется");
             satiety--;
             return true;
         } else {
-            System.out.println("РљРѕС‚РёРє РїСЂРѕСЃРёС‚ РµСЃС‚СЊ");
+            System.out.println("Котик просит есть");
             return false;
         }
     }
 
     public boolean walk() {
         if (satiety > 0) {
-            System.out.println("РљРѕС‚РёРє РіСѓР»СЏРµС‚");
+            System.out.println("Котик гуляет");
             satiety--;
             return true;
         } else {
-            System.out.println("РљРѕС‚РёРє РїСЂРѕСЃРёС‚ РµСЃС‚СЊ");
+            System.out.println("Котик просит есть");
             return false;
         }
     }
 
     public boolean hunt() {
         if (satiety > 0) {
-            System.out.println("РљРѕС‚РёРє РѕС…РѕС‚РёС‚СЃСЏ");
+            System.out.println("Котик охотится");
             satiety--;
             return true;
         } else {
-            System.out.println("РљРѕС‚РёРє РїСЂРѕСЃРёС‚ РµСЃС‚СЊ");
+            System.out.println("Котик просит есть");
             return false;
         }
     }
@@ -95,42 +97,42 @@ public class Kotik {
             switch (randomValue) {
                 case 1:
                     if (play())
-                        actionsArray[i] = "РёРіСЂР°Р»";
+                        actionsArray[i] = "играл";
                     else {
                         eat();
-                        actionsArray[i] = "РµР»";
+                        actionsArray[i] = "ел";
                     }
                     break;
                 case 2:
                     if (sleep())
-                        actionsArray[i] = "СЃРїР°Р»";
+                        actionsArray[i] = "спал";
                     else {
                         eat();
-                        actionsArray[i] = "РµР»";
+                        actionsArray[i] = "ел";
                     }
                     break;
                 case 3:
                     if (wash())
-                        actionsArray[i] = "РјС‹Р»СЃСЏ";
+                        actionsArray[i] = "мылся";
                     else {
                         eat();
-                        actionsArray[i] = "РµР»";
+                        actionsArray[i] = "ел";
                     }
                     break;
                 case 4:
                     if (walk())
-                        actionsArray[i] = "РіСѓР»СЏР»";
+                        actionsArray[i] = "гулял";
                     else {
                         eat();
-                        actionsArray[i] = "РµР»";
+                        actionsArray[i] = "ел";
                     }
                     break;
                 case 5:
                     if (hunt())
-                        actionsArray[i] = "РѕС…РѕС‚РёР»СЃСЏ";
+                        actionsArray[i] = "охотился";
                     else {
                         eat();
-                        actionsArray[i] = "РµР»";
+                        actionsArray[i] = "ел";
                     }
                     break;
             }
