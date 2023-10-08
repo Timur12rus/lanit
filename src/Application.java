@@ -19,9 +19,9 @@ public class Application {
 
         System.out.println("Имя котика: " + kotikOne.getName() + ", вес: " + kotikOne.getWeight());
         if (compareVoice(kotikOne, kotikTwo)) {
-            System.out.println("Котики разговаривают одинаково");
+            System.out.println("Котики одинаково разговаривают");
         } else {
-            System.out.println("Котики разговаривают по-разному");
+            System.out.println("Котики по-разному разговаривают");
         }
 
         System.out.println(Kotik.getCount());
